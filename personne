@@ -1,0 +1,38 @@
+public class Personne {
+    String lastName;
+    String firstName;
+    int birthDay;
+    int birthMonth;
+    int birthYear;
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setBirthDate(int day, int month, int year) {
+        birthYear = year;
+        birthMonth = month;
+        birthDay = day;
+    }
+
+    public int ageIn2023() {
+        return (2023 - birthYear);
+    }
+
+    public void displayPerson() {
+        System.out.println(this.lastName + " " + this.firstName + " is a person born on " + birthDay + "/" + birthMonth + "/" + birthYear);
+    }
+
+    public static void main(String[] args) {
+        Personne student = new Personne();
+        student.setBirthDate(29, 6, 2003);
+        student.setFirstName("Ahmed");
+        student.setLastName("Achour");
+        student.displayPerson();
+        System.out.println("The age of this person is: " + student.ageIn2023() + " years");
+    }
+}
